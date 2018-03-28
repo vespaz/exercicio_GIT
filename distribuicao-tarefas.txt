@@ -1,0 +1,10 @@
+Mateus Brasili - 	imc.php / gera_calculo_imc.php 				(Participante 3)
+
+
+Pedro Gomes - 		form_cadastro_pessoa.php / cadastro_pessoa.php 		(Participante 4)
+
+
+Victor Hugo - 		Index.php / estilos.css E Funcoes.php / cabecalho.php 	(Participante 1 e 5)
+
+
+Vinícius Monteiro - 	calculadora.php / gera_calculo_calculadora.php 		(Participante 2) (Líder)
