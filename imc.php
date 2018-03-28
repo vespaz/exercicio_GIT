@@ -26,12 +26,12 @@
 			
 					<p>
 						<label>Peso: </label>
-						<input type="number" name="peso" required="required" min="0"/>
+						<input type="number" name="peso" required="required" min="0" steep="0.01"/>
 					</p>
 				
 					<p>
 						<label>Altura: </label>
-						<input type="number" name="altura" requried="required" min="0"/>
+						<input type="number" name="altura" requried="required" min="0" steep="0.01"/>
 					</p>
 				
 					<!-- Usuário que está realizando a operação (deve vir dos cadastros de usuários realizados no xml). -->
