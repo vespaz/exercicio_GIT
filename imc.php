@@ -36,12 +36,30 @@
 				
 					<!-- Usuário que está realizando a operação (deve vir dos cadastros de usuários realizados no xml). -->
 
-					<!-- <p>
-						<label>Usuário: </label>
-						<select name="usuario">
-							<option value= >Usuário</option>
-						</select>
-					</p> -->
+					
+					<select name="usuario"> Nome do usuário
+		
+						<option value="Anonimo">Anônimo</option>
+
+						if( file_exists("cadastro_pessoa.xml") ){
+					
+							$xml = simplexml_load_file("cadastro_pessoa.xml");
+					
+							foreach($xml->children() as $aux){
+								
+								$nome = $aux->nome;
+								
+								echo"
+									
+									<option value='$nome'>$nome</option>
+								
+								";
+								
+							}
+						
+						}
+					
+					</select>
 
 					<input type="submit" value="Calcular IMC"/>
 
