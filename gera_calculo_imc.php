@@ -1,4 +1,4 @@
-<?php // Desenvolvido por Matheus Brasili ?>
+<!-- Matheus Brasili -->
 
 <!DOCTYPE html>
 
