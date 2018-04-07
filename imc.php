@@ -7,7 +7,6 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Calculo IMC</title>
-		<link rel="stylesheet" type="text/css" href="estilos.css">
 	</head>
 
 	<body>
@@ -17,21 +16,22 @@
 		<section>
 
 			<h1>IMC (Indíce de Massa Corporal)</h1>
-
+			<br />
+			<br />
 			<?php
-
+				include "cabecalho.php";
 				//Formulário
 
 				echo'<form action="gera_calculo_imc.php" method="post">
 			
 					<p>
 						<label>Peso: </label>
-						<input type="number" name="peso" required="required" min="0" steep="0.01"/>
+						<input class="input" type="number" name="peso" required="required" min="0" steep="0.01"/>
 					</p>
 				
 					<p>
 						<label>Altura: </label>
-						<input type="number" name="altura" requried="required" min="0" steep="0.01"/>
+						<input class="input" type="number" name="altura" requried="required" min="0" steep="0.01"/>
 					</p>
 				
 					<!-- Usuário que está realizando a operação (deve vir dos cadastros de usuários realizados no xml). -->
@@ -49,11 +49,8 @@
 								
 								$nome = $aux->nome;
 								
-								echo"
-									
-									<option value='$nome'>$nome</option>
+								<option value=$nome>$nome</option>;
 								
-								";
 								
 							}
 						
@@ -61,7 +58,7 @@
 					
 					</select>
 
-					<input type="submit" value="Calcular IMC"/>
+					<input class="botao" type="submit" value="Calcular IMC"/>
 
 				</form>';
 
