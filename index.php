@@ -3,12 +3,11 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Home</title>
-		<link rel="stylesheet" href="estilos.css"/>
 	</head>
 	<body>
 		<article>
 			<?php
-				/*include "cabecalho.php";*/
+				include "cabecalho.php";
 
 				//If para verificar se o arquivo "cadastro_pessoa.xml" existe
 				if(file_exists("cadastro_pessoa.xml")){
