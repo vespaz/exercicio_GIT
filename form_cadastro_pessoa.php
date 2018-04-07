@@ -3,6 +3,7 @@
 		<!-- Desenvolvido pelo Pedro Gomes Participante 4-->
 		<meta charset="UTF-8"/>
 		<title>Exercicio GIT</title>
+		<link rel="stylesheet" type="text/css" href="css.css" />
 	</head>
 	
 	<body>
