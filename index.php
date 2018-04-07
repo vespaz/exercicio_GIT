@@ -11,7 +11,7 @@
 				/*include "cabecalho.php";*/
 
 				//If para verificar se o arquivo "cadastro_pessoa.xml" existe
-				if(file_exists(cadastro_pessoa.xml)){
+				if(file_exists("cadastro_pessoa.xml")){
 					
 					$xml = simplexml_load_file("cadastro_pessoa.xml");
 
@@ -49,7 +49,7 @@
 				}
 				
 				//Tabela para os calculos feitos	
-				if(file_exists(gera_caulculo_imc.xml)){
+				if(file_exists("gera_caulculo_imc.xml")){
 					
 					$xml = simplexml_load_file("gera_caulculo_imc.xml");
 

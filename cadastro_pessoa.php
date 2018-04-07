@@ -44,7 +44,7 @@
 				$pessoa->addChild('cidade', $cidade);
 				$pessoa->addChild('estado', $estado);
 				
-				file_put_contents("cadastro_pessoa.xml", $xml->asXML);
+				file_put_contents("cadastro_pessoa.xml", $xml->asXML());
 			}
 			echo "<h1 class='enviado'>Enviado!!</h1>";
 		?>
