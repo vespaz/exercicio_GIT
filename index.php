@@ -5,6 +5,7 @@
 		<title>Home</title>
 	</head>
 	<body>
+		<center><h1>Página Inicial</h1></center>
 		<article>
 			<?php
 				include "cabecalho.php";
@@ -15,6 +16,7 @@
 					$xml = simplexml_load_file("cadastro_pessoa.xml");
 
 					//Tabela de listagem de Usuários
+					echo"<h3>Usuários</h3>";
 					echo"<table>";
 							//cabeçalho da tabela de Usuários cadastrados
 							echo"<thead>";
@@ -53,6 +55,7 @@
 					$xml = simplexml_load_file("gera_caulculo_imc.xml");
 
 					//Tabela de listagem de calculos feitos
+					echo"<h3>Calculos IMC</h3>";
 					echo"<table>";
 							//cabeçalho da tabela de calculos feitos
 							echo"<thead>";
@@ -64,8 +67,35 @@
 						//ForEach para puxar os calculos feitos 
 						foreach($xml->children() as $calculo){
 								echo"<tr>";
-									echo"<td>$calculo->$user</td>";
-									echo"<td>$calculo->$aux</td>";
+									echo"<td>$calculo->nome</td>";
+									echo"<td>$calculo->calculo</td>";
+								echo"</tr>";	
+						}
+					echo"</table>";
+				}else{
+					echo"<h3>";
+						echo"Não há calculos de IMC feitos no momento.";
+					echo"</h3>";
+				}
+
+				if(file_exists("calculadora.xml")){
+					
+					$xml = simplexml_load_file("calculadora.xml");
+
+					//Tabela de listagem de calculos feitos
+					echo"<table>";
+							//cabeçalho da tabela de calculos feitos
+							echo"<thead>";
+								echo"<tr>";
+									echo"<th>Usuários</th>";
+									echo"<th>Resultados</th>";
+								echo"</tr>";
+							echo"</thead>";
+						//ForEach para puxar os calculos feitos
+						foreach($xml->children() as $calculo){
+								echo"<tr>";
+									echo"<td>$calculo->nome</td>";
+									echo"<td>$calculo->resultado</td>";
 								echo"</tr>";	
 						}
 					echo"</table>";
@@ -74,32 +104,6 @@
 						echo"Não há calculos feitos no momento.";
 					echo"</h3>";
 				}
-
-				/*
-				if(file_exists(.xml)){
-					
-					$xml = simplexml_load_file(".xml");
-
-					//Tabela de listagem de calculos feitos
-					echo"<table>";
-							//cabeçalho da tabela de calculos feitos
-							echo"<thead>";
-								echo"<tr>";
-									echo"<th></th>";
-								echo"</tr>";
-							echo"</thead>";
-						//ForEach para puxar os calculos feitos
-						foreach($xml->children() as $//variavel de cadastro de calculos no arquivo .xml){
-								echo"<tr>";
-									echo"<td></td>";
-								echo"</tr>";	
-						}
-					echo"</table>";
-				}else{
-					echo"<h3>";
-						echo"Não há calculos feitos no momento.";
-					echo"</h3>";
-				}*/
 			?>
 		</article>
 	</body>
