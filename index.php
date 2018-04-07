@@ -8,7 +8,7 @@
 	<body>
 		<article>
 			<?php
-				include cabecalho.php;
+				/*include "cabecalho.php";*/
 
 				//If para verificar se o arquivo "cadastro_pessoa.xml" existe
 				if(file_exists(cadastro_pessoa.xml)){
@@ -49,22 +49,24 @@
 				}
 				
 				//Tabela para os calculos feitos	
-				/*if(file_exists(.xml)){
+				if(file_exists(gera_caulculo_imc.xml)){
 					
-					$xml = simplexml_load_file(".xml");
+					$xml = simplexml_load_file("gera_caulculo_imc.xml");
 
 					//Tabela de listagem de calculos feitos
 					echo"<table>";
 							//cabeçalho da tabela de calculos feitos
 							echo"<thead>";
 								echo"<tr>";
-									echo"<th></th>";
+									echo"<th>Usuários</th>";
+									echo"<th>IMC</th>";
 								echo"</tr>";
 							echo"</thead>";
 						//ForEach para puxar os calculos feitos 
-						foreach($xml->children() as $//variavel de cadastro de calculos no arquivo .xml){
+						foreach($xml->children() as $calculo){
 								echo"<tr>";
-									echo"<td></td>";
+									echo"<td>$calculo->$user</td>";
+									echo"<td>$calculo->$aux</td>";
 								echo"</tr>";	
 						}
 					echo"</table>";
@@ -72,7 +74,7 @@
 					echo"<h3>";
 						echo"Não há calculos feitos no momento.";
 					echo"</h3>";
-				}*/
+				}
 
 				/*
 				if(file_exists(.xml)){
@@ -100,7 +102,6 @@
 					echo"</h3>";
 				}*/
 			?>
-				}
 		</article>
 	</body>
 </html>
